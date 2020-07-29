@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MobileApp.GameResult">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.GameResult!"
+                VerticalOptions="Start" 
+                HorizontalOptions="Start" />
+
+            <Grid>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!--P1-->
+                <Label x:Name="p1Name" FontAttributes="Bold" FontSize="18" Grid.Column="1" Grid.Row="0"></Label>
+                <Label x:Name="p1Value" FontAttributes="Bold" FontSize="18" Grid.Column="2" Grid.Row="0"></Label>
+                <Label x:Name="p1Profits" FontAttributes="Bold" FontSize="18" Grid.Column="3" Grid.Row="0"></Label>
+
+                <!--P2-->
+                <Label x:Name="p2Name" FontAttributes="Bold" FontSize="18" Grid.Column="1" Grid.Row="1"></Label>
+                <Label x:Name="p2Value" FontAttributes="Bold" FontSize="18" Grid.Column="2" Grid.Row="1"></Label>
+                <Label x:Name="p2Profits" FontAttributes="Bold" FontSize="18" Grid.Column="3" Grid.Row="1"></Label>
+
+                <!--P3-->
+                <Label x:Name="p3Name" FontAttributes="Bold" FontSize="18" Grid.Column="1" Grid.Row="2"></Label>
+                <Label x:Name="p3Value" FontAttributes="Bold" FontSize="18" Grid.Column="2" Grid.Row="2"></Label>
+                <Label x:Name="p3Profits" FontAttributes="Bold" FontSize="18" Grid.Column="3" Grid.Row="2"></Label>
+
+                <!--P4-->
+                <Label x:Name="p4Name" FontAttributes="Bold" FontSize="18" Grid.Column="1" Grid.Row="3"></Label>
+                <Label x:Name="p4Value" FontAttributes="Bold" FontSize="18" Grid.Column="2" Grid.Row="3"></Label>
+                <Label x:Name="p4Profits" FontAttributes="Bold" FontSize="18" Grid.Column="3" Grid.Row="3"></Label>
+
+            </Grid>
+
+            <Button Text="New Game" Clicked="Button_Clicked"></Button>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MobileApp.GameOnGoing">
+    <StackLayout Padding="20" Spacing="0">
+        <Button x:Name="btnViewHistory" Text="View History" Clicked="btnViewHistory_Clicked"></Button>
+        <Label>
+        </Label>
+        <Frame BackgroundColor="Yellow" BorderColor="DarkSlateGray" Padding="0" IsVisible="True">
+            <Grid Padding="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label Margin="10,0,10,0" x:Name="p1Name" VerticalOptions="Center" Grid.Column="0" FontSize="20"  HorizontalTextAlignment="Center"></Label>
+                <Label Margin="10,0,10,0" x:Name="p2Name" VerticalOptions="Center" Grid.Column="1" FontSize="20"  HorizontalTextAlignment="Center"></Label>
+                <Label Margin="10,0,10,0" x:Name="p3Name" VerticalOptions="Center" Grid.Column="2" FontSize="20"  HorizontalTextAlignment="Center"></Label>
+                <Label Margin="10,0,10,0" x:Name="p4Name" VerticalOptions="Center" Grid.Column="3" FontSize="20" HorizontalTextAlignment="Center"></Label>
+
+            </Grid>
+        </Frame>
+
+        <Frame BackgroundColor="White" BorderColor="DarkSlateGray" Padding="0" IsVisible="True">
+            <Grid Padding="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label Margin="10,0,10,0" x:Name="p1TotalCard" VerticalOptions="Center" Grid.Column="0" FontSize="50"  HorizontalTextAlignment="Center"></Label>
+                <Label Margin="10,0,10,0" x:Name="p2TotalCard" VerticalOptions="Center" Grid.Column="1" FontSize="50"  HorizontalTextAlignment="Center"></Label>
+                <Label Margin="10,0,10,0" x:Name="p3TotalCard" VerticalOptions="Center" Grid.Column="2" FontSize="50" HorizontalTextAlignment="Center" ></Label>
+                <Label Margin="10,0,10,0" x:Name="p4TotalCard" VerticalOptions="Center" Grid.Column="3" FontSize="50" HorizontalTextAlignment="Center" ></Label>
+
+            </Grid>
+        </Frame>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- P1 -->
+            <Label  x:Name="lblP1Name" FontAttributes="Bold" FontSize="Large" TextColor="Green" Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 0, 5, 0" />
+            <Entry IsPassword="False" x:Name="p1Value" Keyboard="Telephone" Grid.Column="1" Grid.Row="0" Focused="pValue_Focused"></Entry>
+
+            <!-- P2 -->
+            <Label x:Name="lblP2Name" FontAttributes="Bold" FontSize="Large" TextColor="Green" Grid.Row="1" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 0, 5, 0" />
+            <Entry IsPassword="False" x:Name="p2Value" Keyboard="Telephone" Grid.Column="1" Grid.Row="1"></Entry>
+
+            <!-- P3 -->
+            <Label  x:Name="lblP3Name" FontAttributes="Bold" FontSize="Large" TextColor="Green" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 0, 5, 0" />
+            <Entry IsPassword="False" x:Name="p3Value" Keyboard="Telephone" Grid.Column="1" Grid.Row="2"></Entry>
+
+            <!-- P4 -->
+            <Label x:Name="lblP4Name" FontAttributes="Bold" FontSize="Large" TextColor="Green" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" Margin="0, 0, 5, 0" />
+            <Entry IsPassword="False" x:Name="p4Value" Keyboard="Telephone" Grid.Column="1" Grid.Row="3"></Entry>
+        </Grid>
+
+        <Button Text="Submit" x:Name="btnSubmit" Clicked="btnSubmit_Clicked"></Button>
+        <Button Text="EndGame" x:Name="btnEndGame" Clicked="btnEndGame_Clicked"></Button>
+    </StackLayout>
+</ContentPage>

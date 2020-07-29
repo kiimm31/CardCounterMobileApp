@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MobileApp.GameHistory">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Frame BackgroundColor="Yellow" BorderColor="DarkSlateGray" Padding="0" IsVisible="True">
+                <Grid Padding="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                        <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                        <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                        <ColumnDefinition Width="2.5*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Margin="10,0,10,0" x:Name="p1Name" VerticalOptions="Center" Grid.Column="0" FontSize="20"  HorizontalTextAlignment="Center"></Label>
+                    <Label Margin="10,0,10,0" x:Name="p2Name" VerticalOptions="Center" Grid.Column="1" FontSize="20"  HorizontalTextAlignment="Center"></Label>
+                    <Label Margin="10,0,10,0" x:Name="p3Name" VerticalOptions="Center" Grid.Column="2" FontSize="20" HorizontalTextAlignment="Center" ></Label>
+                    <Label Margin="10,0,10,0" x:Name="p4Name" VerticalOptions="Center" Grid.Column="3" FontSize="20" HorizontalTextAlignment="Center"></Label>
+
+                </Grid>
+            </Frame>
+            <ListView Margin="0,20,0,0" ItemsSource="{Binding _history.Games}" x:Name="listViewHistory" VerticalOptions="FillAndExpand" VerticalScrollBarVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Label Grid.Column="0" Text="{Binding p1Cards}" HorizontalTextAlignment="Center" FontSize="30" VerticalOptions="CenterAndExpand"/>
+                                <Label Grid.Column="1" Text="{Binding p2Cards}" HorizontalTextAlignment="Center" FontSize="30" VerticalOptions="CenterAndExpand"/>
+                                <Label Grid.Column="2" Text="{Binding p3Cards}" HorizontalTextAlignment="Center" FontSize="30" VerticalOptions="CenterAndExpand"/>
+                                <Label Grid.Column="3" Text="{Binding p4Cards}" HorizontalTextAlignment="Center" FontSize="30" VerticalOptions="CenterAndExpand"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
